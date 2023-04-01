@@ -14,30 +14,29 @@
         <h1>Welcome to my Portfolio!</h1>
         <nav>
             <ul>
-                <li>
-                    This will be my navbar
-                </li>
+                <li><a href="#info">About Me</a></li>
+                <li><a href="#portfolio">My Portfolio</a></li>
+                <li><a href="#contacts">Contacts</a></li>
             </ul>
         </nav>
     </header>
 
-    <figure id="pilot"></figure>
+    <figure class="pilot"></figure>
 
     <main>
-        <section>
-            <h2>About Me</h2>
+        <section id="info" class="card">
+            <!-- About Me -->
             <p>I like playing video games, eating sweet food, reading manga and watching anime, and I LOVE cats!
             <p>I'm currently taking the GA Tech Full Stack Web Development Bootcamp. Although easier than what's to come for me, this webpage will be quite the challenge to tackle.</p>
             <p>By the end of this, I hope to have grown in my knowledge of CSS and possibly make my own stylised website! Of course it will take time and practice, but I'm willing to put in the hours for something I find so interesting!</p>
         </section>
 
-        <section>
-            <h2>Work</h2>
+        <section id="portfolio" class="card">
+            <!-- Work -->
         </section>
 
-        <section class="contacts">
-            <h2>Contact Me</h2>
-            <figure class="divider"></figure>
+        <section id="contacts" class="card">
+            <!-- Contacts -->
             <nav>
                 <ul>
                     <li>Phone</li>
@@ -49,6 +48,18 @@
             </nav>
         </section>
     </main>
+
+    <aside>
+        <section id="aboutMe" class="sidebar">
+            <h2>About Me</h2>
+        </section>
+        <section id="myWork" class="sidebar">
+            <h2>My Work</h2>
+        </section>
+        <section id="contactList" class="sidebar">
+            <h2>Contacts</h2>
+        </section>
+    </aside>
 </body>
 
 </html>
