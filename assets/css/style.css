@@ -31,8 +31,37 @@ header nav ul li {
 }
 
 /* sidebar */
-.sidebar {
+main {
     display: flex;
+}
+
+/* .sidebar {
+    flex: 1;
+    border-right: 5px solid red;
+    padding: 20px 50% 20px;
+    margin: 10px;
+} */
+/* 
+.card {
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 3;
+    border: 1px solid black;
+} */
+
+#aboutMe {
+    padding: 20px;
+    border: 1px solid blue;
+}
+#myWork {
+    padding:20px;
+    border: 1px solid green;
+    margin: 10px;
+}
+#contactList {
+    flex-direction: row;
+    padding: 20px;
+    border: 1px solid red;
 }
 
 /* pilot background */
@@ -46,7 +75,7 @@ header nav ul li {
     background-size: cover;
     background-position: center;
 }
-
+/* 
 @media screen and (min-width=700px) {
     
-}
+} */
