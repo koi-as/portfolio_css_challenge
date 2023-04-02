@@ -1,3 +1,6 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 /* header bar */
 header {
     display:  flex;
@@ -30,52 +33,59 @@ header nav ul li {
     font-weight: bolder;
 }
 
-/* sidebar */
 main {
     display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    margin: 20px;
 }
 
-/* .sidebar {
-    flex: 1;
-    border-right: 5px solid red;
-    padding: 20px 50% 20px;
-    margin: 10px;
-} */
-/* 
-.card {
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex: 3;
+/* sidebar display */
+main aside {
     border: 1px solid black;
-} */
+    border-right: 1px solid orange;
+    padding: 5px 20px 5px;
+    margin: 10px;
+    font-size: 40px;
+}
 
-#aboutMe {
+main aside section {
+    display: flex;
     padding: 20px;
     border: 1px solid blue;
+    margin: 10px 5px 10px;
 }
-#myWork {
-    padding:20px;
-    border: 1px solid green;
+
+/* content display */
+main article {
+    flex: 3 0;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 5px 20px 5px;
     margin: 10px;
 }
-#contactList {
-    flex-direction: row;
+
+main article section {
+    margin: 20px 5px 20px;
+    display: flex;
     padding: 20px;
-    border: 1px solid red;
+    border: 1px solid blue;
+    margin: 10px 5px 10px;
+    flex-wrap: wrap;
+}
+
+main article section ul {
+    list-style: circle;
 }
 
 /* pilot background */
 .pilot {
     display: flex;
     flex: 1 0 200px;
-    height: 100px;
+    height: 300px;
     width: 100%;
     margin-bottom:25px;
     background-image: url(../images/pilot_background.jpg);
     background-size: cover;
     background-position: center;
 }
-/* 
-@media screen and (min-width=700px) {
-    
-} */
