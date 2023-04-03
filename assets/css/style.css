@@ -1,91 +1,73 @@
+/* universal selector */
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
 }
-/* header bar */
+
+/* header styling */
+
 header {
-    display:  flex;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
-    background-color: gray;
-    align-items: center;
-    width: 100%;
+    color: #fff;
+    background: #224275;
     text-align: center;
 }
 
-header nav {
-    display:  flex;
-    background-color: #5e7fef;
-    width: 100%;
-    justify-content: center;
+header h1 {
+    font-size: 50px;
+    padding: 20px 40px;
+    box-shadow: 0 30px 40px 40px rgba(0,0,0,.1);
 }
 
-header nav ul li {
+header section {
     display: flex;
-    flex-direction: column;
-    color: white;
-    background-color: #5e7fab;
-    border: 1px dotted black;
-    padding: 2px 60px 2px 60px;
-    margin: 5px;
-    font-size: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
+    align-items: center;
+    padding: 10px 0;
 }
 
-main {
+header section h3 {
+    background-color: #5683cc;
+    padding: 35px;
+    padding-left: 50px;
+    font-size: 30px
+}
+
+header section figure {
+    height: 100px;
+    width: 100px;
+    background-image: url(../images/Cat-min.png);
+    background-size: cover;
+    background-position: right;
+    border-radius: 0 20px 20px 0;
+}
+
+header nav ul {
     display: flex;
-    justify-content: space-around;
-    border: 1px solid black;
-    margin: 20px;
+    justify-content: space-evenly;
+    list-style-type: none;
 }
 
-/* sidebar display */
-main aside {
-    border: 1px solid black;
-    border-right: 1px solid orange;
-    padding: 5px 20px 5px;
-    margin: 10px;
-    font-size: 40px;
-}
+/* body styling */
 
-main aside section {
-    display: flex;
-    padding: 20px;
-    border: 1px solid blue;
-    margin: 10px 5px 10px;
-}
-
-/* content display */
 main article {
-    flex: 3 0;
-    flex-direction: column;
+    margin: 5px 20px;
     border: 1px solid black;
-    padding: 5px 20px 5px;
-    margin: 10px;
+    padding: 5px;
 }
 
 main article section {
-    margin: 20px 5px 20px;
-    display: flex;
-    padding: 20px;
-    border: 1px solid blue;
-    margin: 10px 5px 10px;
+    margin: 20px 0;
+    border: 1px solid red;
+    padding: 5px;
+}
+
+.aboutMe {
     flex-wrap: wrap;
+    border: 1px solid green;
 }
 
-main article section ul {
-    list-style: circle;
-}
-
-/* pilot background */
-.pilot {
-    display: flex;
-    flex: 1 0 200px;
-    height: 300px;
-    width: 100%;
-    margin-bottom:25px;
-    background-image: url(../images/pilot_background.jpg);
-    background-size: cover;
-    background-position: center;
+.aboutMe h2,
+.aboutMe div {
+    display: inline-block;
+    border: 1px solid blue;
+    vertical-align: top;
 }
