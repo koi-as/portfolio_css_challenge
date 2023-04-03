@@ -52,6 +52,10 @@ main article {
     margin: 5px 20px;
     border: 1px solid black;
     padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 main article section {
@@ -61,13 +65,63 @@ main article section {
 }
 
 .aboutMe {
-    flex-wrap: wrap;
+    display: flex;
+    height: 400px;
+    width: 1500px;
     border: 1px solid green;
+    padding: 40px;
 }
 
 .aboutMe h2,
 .aboutMe div {
     display: inline-block;
-    border: 1px solid blue;
     vertical-align: top;
+    padding: 10px;
+}
+
+.aboutMe h2 {
+    border-right: 5px solid lightblue;
+}
+
+.myWork {
+    display: flex;
+    height: 600px;
+    width: 1500px;
+    border: 1px solid green;
+    padding: 40px;
+}
+
+.myWork h2,
+.myWork div {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.myWork h2 {
+    border-right: 5px solid lightblue;
+}
+
+.contactList {
+    display: flex;
+    height: 200px;
+    width: 1500px;
+    border: 1px solid green;
+    padding: 40px;
+}
+
+.contactList h2,
+.contactList nav {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.contactList h2 {
+    border-right: 5px solid lightblue;
+}
+
+.contactList nav p {
+    display: inline-block;
+    word-spacing: 20px;
 }
