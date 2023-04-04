@@ -1,3 +1,8 @@
+:root {
+    --light: #fff;
+    --dark: #13293d;
+}
+
 /* universal selector */
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -8,7 +13,7 @@
 
 header {
     color: #fff;
-    background: #224275;
+    background: var(--dark);
     text-align: center;
 }
 
@@ -26,9 +31,11 @@ header section {
 
 header section h3 {
     background-color: #5683cc;
-    padding: 35px;
+    padding: 33px;
     padding-left: 50px;
-    font-size: 30px
+    font-size: 30px;
+    border-top: 2px solid var(--light);
+    border-bottom: 2px solid var(--light);
 }
 
 header section figure {
@@ -38,12 +45,25 @@ header section figure {
     background-size: cover;
     background-position: right;
     border-radius: 0 20px 20px 0;
+    border: 2px solid var(--light);
 }
 
 header nav ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     list-style-type: none;
+    padding: 30px;
+}
+
+header nav ul li {
+    padding: 10px;
+    background-color: #5683ee;
+    border: 2px dotted black;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
 /* body styling */
@@ -102,6 +122,7 @@ main article section {
     border-right: 5px solid lightblue;
 }
 
+/* contact list properties */
 .contactList {
     display: flex;
     height: 200px;
@@ -112,7 +133,6 @@ main article section {
 
 .contactList h2,
 .contactList nav {
-    display: inline-block;
     vertical-align: top;
     padding: 10px;
 }
@@ -121,7 +141,50 @@ main article section {
     border-right: 5px solid lightblue;
 }
 
-.contactList nav p {
-    display: inline-block;
+.contactList nav ul li {
+    display: inline;
+    margin: 0 50px 0;
     word-spacing: 20px;
+}
+
+.contactList nav ul li[data-phone]:hover::after {
+    content: attr(data-phone);
+    text-decoration: none;
+    position:relative;
+    left: 10px;
+    min-width: 100px;
+    border: 1px solid #aaaaaa;
+    background-color: #13293d;
+    padding: 12px;
+    color: #fff;
+    font-size: 14px;
+    z-index:1;
+}
+
+.contactList nav ul li[data-email]:hover::after {
+    content: attr(data-email);
+    text-decoration: none;
+    position:relative;
+    left: 10px;
+    min-width: 100px;
+    border: 1px solid #aaaaaa;
+    background-color: #13293d;
+    padding: 12px;
+    color: #fff;
+    font-size: 14px;
+    z-index:1;
+}
+
+.contactList nav ul li[data-github]:hover::after {
+    content: attr(data-github);
+    text-decoration: none;
+    position:relative;
+    left: 10px;
+    min-width: 100px;
+    border: 1px solid #aaaaaa;
+    background-color: #13293d;
+    padding: 12px;
+    color: #fff;
+    font-size: 14px;
+    z-index:1;
 }

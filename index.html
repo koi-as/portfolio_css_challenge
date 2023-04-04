@@ -15,21 +15,20 @@
         <section>
             <h3>Alex Seidensticker</h3>
             <figure class="minCat"></figure>
+            <nav>
+                <ul>
+                    <li><a href="#aboutMe">About Me</a></li>
+                    <li><a href="#myWork">My Portfolio</a></li>
+                    <li><a href="#contactList">Contacts</a></li>
+                </ul>
         </section>
-        <nav>
-            <ul>
-                <li><a href="#aboutMe">About Me</a></li>
-                <li><a href="#myWork">My Portfolio</a></li>
-                <li><a href="#contactList">Contacts</a></li>
-            </ul>
-        </nav>
     </header>
 
     <figure class="pilot"></figure>
 
     <main>
         <article>
-            <section class="aboutMe">
+            <section id="aboutMe" class="aboutMe">
                 <!-- About Me --> 
                 <h2>About Me</h2>
                 <div>
@@ -39,7 +38,7 @@
                 </div>
             </section>
 
-            <section class="myWork">
+            <section id="myWork" class="myWork">
                 <!-- Work -->
                 <h2>My Work</h2>
                 <div>
@@ -48,14 +47,15 @@
                 </div>
             </section>
 
-            <section class="contactList">
+            <section id="contactList" class="contactList">
                 <!-- Contacts -->
                 <h2>Contacts</h2>
                 <nav>
-                    <p>Phone</p>
-                    <p>Email</p>
-                    <p>GitHub</p>
-                    <p>Steam</p>
+                    <ul>
+                        <li id="phone" data-phone="912-398-6408">Phone</li>
+                        <li id="email" data-email="alextseidensticker@gmail.com">Email</li>
+                        <li id="github" data-github="https://github.com/koi-as">GitHub</li>
+                    </ul>
                 </nav>
             </section>
         </article>
