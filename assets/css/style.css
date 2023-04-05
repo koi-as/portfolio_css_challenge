@@ -163,7 +163,7 @@ main article section {
 
 .myWork section button p {
     background-color: var(--banner);
-    max-height: 30;
+    max-height: 70px;
     padding: 18px;
     padding-left: 50px;
     border-radius: 0 20px 20px 0;
