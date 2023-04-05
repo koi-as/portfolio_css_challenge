@@ -1,6 +1,7 @@
 :root {
     --light: #fff;
     --dark: #13293d;
+    --banner: #5683ee;
 }
 
 /* universal selector */
@@ -12,7 +13,7 @@
 /* header styling */
 
 header {
-    color: #fff;
+    color: var(--light);
     background: var(--dark);
     text-align: center;
 }
@@ -20,17 +21,16 @@ header {
 header h1 {
     font-size: 50px;
     padding: 20px 40px;
-    box-shadow: 0 30px 40px 40px rgba(0,0,0,.1);
 }
 
 header section {
     display: flex;
     align-items: center;
-    padding: 10px 0;
+    padding: 30px 0;
 }
 
 header section h3 {
-    background-color: #5683cc;
+    background-color: var(--banner);
     padding: 33px;
     padding-left: 50px;
     font-size: 30px;
@@ -50,19 +50,21 @@ header section figure {
 
 header nav ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style-type: none;
     padding: 30px;
 }
 
 header nav ul li {
     padding: 10px;
-    background-color: #5683ee;
-    border: 2px dotted black;
+    background-color: var(--banner);
+    border: 2px solid var(--light);
+    border-radius: 20px;
+    margin: 0 5vw;
 }
 
 header nav ul li a {
-    color: #fff;
+    color: var(--light);
     text-decoration: none;
 }
 
@@ -70,25 +72,24 @@ header nav ul li a {
 
 main article {
     margin: 5px 20px;
-    border: 1px solid black;
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
 }
 
 main article section {
     margin: 20px 0;
-    border: 1px solid red;
     padding: 5px;
 }
 
+/* about me class selectors */
 .aboutMe {
     display: flex;
-    height: 400px;
-    width: 1500px;
-    border: 1px solid green;
+    flex: 2 1 200px;
+    height: 70vh;
+    width: 100%;
     padding: 40px;
 }
 
@@ -100,34 +101,124 @@ main article section {
 }
 
 .aboutMe h2 {
+    font-size: 40px;
+    padding-right: 58px;
     border-right: 5px solid lightblue;
 }
 
+.aboutMe p {
+    padding: 0 0 20px;
+    line-height: 1.5;
+}
+
+/* my work class selectors */
 .myWork {
     display: flex;
-    height: 600px;
-    width: 1500px;
-    border: 1px solid green;
+    height: 140vh;
+    width: 100%;
     padding: 40px;
 }
 
 .myWork h2,
-.myWork div {
+.myWork section {
     display: inline-block;
     vertical-align: top;
     padding: 10px;
 }
 
 .myWork h2 {
+    font-size: 40px;
     border-right: 5px solid lightblue;
 }
 
-/* contact list properties */
+.myWork section {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 200px;
+}
+
+.myWork section div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.myWork section button {
+    display: flex;
+    border: 4px solid var(--dark);
+    border-radius: 20px;
+    margin: 5px;
+  }
+
+.myWork section button:hover {
+    box-shadow: 0 0 20px var(--dark) inset;
+    cursor: pointer;
+}
+
+.myWork section button:focus {
+    border: 4px solid lightblue;
+    box-shadow: 0 0 20px var(--dark) inset;
+    z-index:2;
+}
+
+.myWork section button p {
+    background-color: var(--banner);
+    padding: 18px;
+    padding-left: 50px;
+    border-radius: 0 20px 20px 0;
+    border: 2px solid var(--light);
+    border-left: 0;
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--light);
+}
+
+/* my work id selectors */
+#cats {
+    height: 600px;
+    width: 100%;
+    background-image: url(../images/coal.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#pilot {
+    height: 300px;
+    width: 49%;
+    background-image: url(../images/titanfall2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#anime {
+    height: 300px;
+    width: 49%;
+    background-image: url(../images/anime.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#minecraft {
+    height: 300px;
+    width: 49%;
+    background-image: url(../images/minecraft.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#food {
+    height: 300px;
+    width: 49%;
+    background-image: url(../images/cookies.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* contact list class selectors */
 .contactList {
     display: flex;
-    height: 200px;
-    width: 1500px;
-    border: 1px solid green;
+    height: 15vh;
+    width: 100%;
     padding: 40px;
 }
 
@@ -138,6 +229,7 @@ main article section {
 }
 
 .contactList h2 {
+    font-size: 40px;
     border-right: 5px solid lightblue;
 }
 
@@ -145,6 +237,9 @@ main article section {
     display: inline;
     margin: 0 50px 0;
     word-spacing: 20px;
+    color: var(--dark);
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .contactList nav ul li[data-phone]:hover::after {
